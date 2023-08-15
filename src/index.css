@@ -64,6 +64,18 @@ p {
   display: none;
 }
 
-.hubspot-form {
+.hubspot-form, .continue-form {
   min-height: 320px;
+}
+
+.hs-button {
+  width: 100%;
+  border-radius: 6px;
+  font-weight: 100;
+  padding: 14px 0;
+}
+
+.continue-form > div {
+  margin-top: 20px;
+  padding: 11.2px 0;
 }

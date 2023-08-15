@@ -1,15 +1,27 @@
 import React, { useState, useEffect } from "react";
 import styles from "../styles";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { motion } from "framer-motion";
+import { PopupButton } from "react-calendly";
+
+const daysheetsUrl = "https://downloads.daysheets.com/macOS/Daysheets.dmg"
 
 const Popup = ({ isOpen, onClose, formId }) => {
+
+  const [visible, setVisible] = useState(true)
+
   useEffect(() => {
+    setVisible(true)
     if (isOpen) {
       window.hbspt.forms.create({
         region: "na1",
         portalId: "40185524",
         formId: "4bea449a-e29f-4af4-8fa5-a47a72e88843",
         target: `#${formId}`,
+        onFormSubmitted: function($form) {
+          setVisible(false)
+        },
+        cssClass: "hs-form"
       });
     }
   }, [isOpen]);
@@ -48,7 +60,34 @@ const Popup = ({ isOpen, onClose, formId }) => {
               eiusmod tempor.
             </p>
           </div>
-          <div id={formId} className="hubspot-form"></div>
+          {visible? 
+            <div id={formId} className="hubspot-form"></div>
+            :
+            <div className="continue-form">
+              <motion.a
+                href={daysheetsUrl}
+                className={`App bg-blue text-black text-center ${styles.button} flex items-center justify-center cursor-pointer`}
+              >
+                Download Daysheets
+              </motion.a>
+
+              <motion.div
+                className={`App bg-blue text-black text-center ${styles.buttonBlack}`}
+              >
+                <PopupButton
+                  url="https://calendly.com/michael-csc/daysheets-demo"
+                  /*
+                   * react-calendly uses React's Portal feature (https://reactjs.org/docs/portals.html) to render the popup modal. As a result, you'll need to
+                   * specify the rootElement property to ensure that the modal is inserted into the correct domNode.
+                   */
+                  rootElement={document.getElementById("root")}
+                  text="Book a Demo"
+                />
+              </motion.div>
+            </div>
+          }
+
+
           {/*<form action="" className="flex flex-col gap-[8px]">
             <div className="flex flex-col">
               <label className="pb-[4px]">First name</label>
