@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../styles";
 import { gradient } from "../assets";
 import { motion } from "framer-motion";
 import { PopupButton } from "react-calendly";
+import Popup from "./Popup";
 
 const fadeUp = {
   hidden: {
@@ -39,10 +40,21 @@ const fadeUp2 = {
 const daysheetsUrl = "https://www.daysheets.com"; // Replace this with the URL to your daysheets file
 
 const BottomCTA = () => {
+  const [popupOpen, setPopupOpen] = useState(false);
+
+  const openPopup = () => {
+    setPopupOpen(true);
+  };
+
+  const closePopup = () => {
+    setPopupOpen(false);
+  };
+
   return (
     <div
       className={`${styles.sectionBox} pb-[64px] bg-white flex flex-col items-center px-[8px]`}
     >
+      <Popup isOpen={popupOpen} onClose={closePopup} formId="bottom-form" />
       <div
         className={`${styles.contentBox} py-[120px] mx-[32px] w-full bg-blue flex flex-col items-center rounded-2xl relative z-10 overflow-hidden`}
       >
@@ -62,16 +74,15 @@ const BottomCTA = () => {
             </div>
 
             <div className="flex flex-col lg:flex-row gap-[16px]">
-              <motion.a
-                href={daysheetsUrl}
-                className={`${styles.heroButtonWhite}`}
-                variants={fadeUp}
+              <motion.button
+                className={`${styles.heroButtonWhite} cursor-pointer`}
+                variants={fadeUp2}
                 initial="hidden"
                 animate="visible"
+                onClick={openPopup}
               >
                 Download Daysheets
-              </motion.a>
-
+              </motion.button>
               <motion.div
                 className={`App bg-blue text-black text-center ${styles.heroButtonWhite}`}
                 variants={fadeUp2}
