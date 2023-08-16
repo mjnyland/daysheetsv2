@@ -8,10 +8,10 @@ const daysheetsUrl = "https://downloads.daysheets.com/macOS/Daysheets.dmg"
 
 const Popup = ({ isOpen, onClose, formId }) => {
 
-  const [visible, setVisible] = useState(true)
+  const [visible, setVisible] = useState(false)
 
   useEffect(() => {
-    setVisible(true)
+    setVisible(false)
     if (isOpen) {
       window.hbspt.forms.create({
         region: "na1",
@@ -20,8 +20,7 @@ const Popup = ({ isOpen, onClose, formId }) => {
         target: `#${formId}`,
         onFormSubmitted: function($form) {
           setVisible(false)
-        },
-        cssClass: "hs-form"
+        }
       });
     }
   }, [isOpen]);
@@ -67,12 +66,14 @@ const Popup = ({ isOpen, onClose, formId }) => {
               <motion.a
                 href={daysheetsUrl}
                 className={`App bg-blue text-black text-center ${styles.button} flex items-center justify-center cursor-pointer`}
+                onClick={onClose}
               >
                 Download Daysheets
               </motion.a>
 
               <motion.div
                 className={`App bg-blue text-black text-center ${styles.buttonBlack}`}
+                onClick={onClose}
               >
                 <PopupButton
                   url="https://calendly.com/michael-csc/daysheets-demo"
