@@ -8,10 +8,10 @@ const daysheetsUrl = "https://downloads.daysheets.com/macOS/Daysheets.dmg"
 
 const Popup = ({ isOpen, onClose, formId }) => {
 
-  const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = useState(true)
 
   useEffect(() => {
-    setVisible(false)
+    setVisible(true)
     if (isOpen) {
       window.hbspt.forms.create({
         region: "na1",
