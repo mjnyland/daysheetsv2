@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Hero,
   Reviews,
@@ -12,20 +12,9 @@ import {
   Flights,
   Footer,
   Mobile,
-  Popup,
 } from "../components";
 
 const Home = () => {
-  const [popupOpen, setPopupOpen] = useState(false);
-
-  const openPopup = () => {
-    setPopupOpen(true);
-  };
-
-  const closePopup = () => {
-    setPopupOpen(false);
-  };
-
   return (
     <div className="relative">
       <div className="sticky top-0 z-30">

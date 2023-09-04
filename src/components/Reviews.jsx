@@ -73,7 +73,7 @@ const Reviews = () => {
   ));
 
   return (
-    <div className={`${styles.sectionBox} bg-blue relative`}>
+    <div className={`${styles.sectionBox} bg-blue relative`} loading="lazy">
       <div className={`relative`}>
         <Carousel
           responsive={responsive}

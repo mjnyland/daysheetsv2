@@ -64,10 +64,8 @@ const Hero = () => {
     setPopupOpen(false);
   };
 
-  const daysheetsUrl = "https://apps.apple.com/us/app/daysheets/id1579012240"; // Replace this with the URL to your daysheets file
-
   return (
-    <section id="root" className={`${styles.sectionBox} bg-white relative`}>
+    <section id="root" className={`${styles.sectionBoxFlat} bg-white relative`}>
       <Popup isOpen={popupOpen} onClose={closePopup} formId="hero-form" />
       <div
         className={`${styles.contentBox} flex flex-col items-center pt-[80px] px-4 overflow-hidden`}
@@ -125,17 +123,17 @@ const Hero = () => {
               />
             </motion.div>
           </div>
-        </div>
-
-        <div className={`max-w-[1000px] pt-[80px] relative z-20`}>
-          <motion.img
-            variants={fadeUp3}
-            initial="hidden"
-            animate="visible"
-            src={mockup}
-            alt="Daysheets UI Mobile and Desktop Mockup"
-            className=""
-          />
+          <div
+            className={`max-w-[1000px] pt-[80px] relative z-20 h-[500px] sm:h-[816px]`}
+          >
+            <motion.img
+              variants={fadeUp3}
+              initial="hidden"
+              animate="visible"
+              src={mockup}
+              alt="Daysheets UI Mobile and Desktop Mockup"
+            />
+          </div>
         </div>
       </div>
 
