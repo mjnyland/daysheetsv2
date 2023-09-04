@@ -76,9 +76,10 @@ const BottomCTA = () => {
             <div className="flex flex-col lg:flex-row gap-[16px]">
               <motion.button
                 className={`${styles.heroButtonWhite} cursor-pointer`}
-                variants={fadeUp2}
+                variants={fadeUp}
                 initial="hidden"
-                animate="visible"
+                whileInView="visible"
+                viewport={{ once: true, amount: 1 }}
                 onClick={openPopup}
               >
                 Download Daysheets
