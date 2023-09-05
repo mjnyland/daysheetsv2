@@ -33,10 +33,11 @@ const Reviews = () => {
     },
     {
       id: 1,
-      review: `I'm loving Daysheets! It's fast, and simple.`,
+      review: `Daysheets is is quick & easy to learn, their team is always available, and they implement our suggestions. Daysheets has quickly become our go-to touring information highway, and I am looking forward to their growth.
+`,
       image: avatar,
-      name: "John Doe",
-      title: "Production Manager",
+      name: "Tracey Wiedeman",
+      title: "Production Coordinator",
     },
     {
       id: 2,

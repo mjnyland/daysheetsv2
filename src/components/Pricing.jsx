@@ -4,7 +4,6 @@ import { PopupButton } from "react-calendly";
 import HelpContent from "./HelpContent";
 
 const Prices = () => {
-  const daysheetsUrl = "https://apps.apple.com/us/app/daysheets/id1579012240";
   const tier1Stripe = "https://buy.stripe.com/6oE9CN0GOajC50YeVn";
   const tier2Stripe = "https://buy.stripe.com/eVaeX7gFMgI08da14y";
   const tier3Stripe = "https://buy.stripe.com/14k5mx4X42Ra50Y8x1";

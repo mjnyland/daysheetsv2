@@ -144,7 +144,7 @@ const Flights = () => {
             </p>
           </motion.div>
 
-          <div className=" bg-blue border-[1px] border-gray rounded-xl">
+          <div className=" bg-blue border-[1px] border-gray rounded-xl overflow-hidden">
             <img
               src={dragAndDropFlight}
               alt="Plane tickets being uploaded to Daysheets"
