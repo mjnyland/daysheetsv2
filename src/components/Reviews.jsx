@@ -46,20 +46,6 @@ const Reviews = () => {
       name: "Rob Mirhadi",
       title: "Tour Manager",
     },
-    {
-      id: 3,
-      review: `I'm loving Daysheets! It's fast, and simple.`,
-      image: avatar,
-      name: "John Doe",
-      title: "Production Manager",
-    },
-    {
-      id: 4,
-      review: `I'm loving Daysheets! It's fast, and simple.`,
-      image: avatar,
-      name: "John Doe",
-      title: "Tour Manager",
-    },
   ];
 
   const review = reviewData.map((item, index) => (
