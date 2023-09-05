@@ -33,7 +33,7 @@ const Reviews = () => {
     },
     {
       id: 1,
-      review: `Daysheets is is quick & easy to learn, their team is always available, and they implement our suggestions. Daysheets has quickly become our go-to touring information highway, and I am looking forward to their growth.
+      review: `Daysheets is is quick & easy to learn, their team is always available, and they implement our suggestions.
 `,
       image: avatar,
       name: "Tracey Wiedeman",
