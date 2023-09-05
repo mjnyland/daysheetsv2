@@ -28,8 +28,8 @@ const Reviews = () => {
       id: 0,
       review: `Using Daysheets has made touring more efficient and organized. It’s a complete game-changer.`,
       image: avatar,
-      name: "Rob Mirhadi",
-      title: "Tour Manager",
+      name: "John Warren",
+      title: "Tour Manager / Tour Accountant",
     },
     {
       id: 1,
@@ -41,9 +41,9 @@ const Reviews = () => {
     },
     {
       id: 2,
-      review: `I won't use anything else!`,
+      review: `Daysheets has just scratched the surface of its potential. We can’t wait to see what’s next.`,
       image: avatar,
-      name: "John Doe",
+      name: "Rob Mirhadi",
       title: "Tour Manager",
     },
     {
