@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styles from "../styles";
 import { AiOutlineClose } from "react-icons/ai";
 
 const HelpPopup = ({ isOpen, onClose, formId }) => {
-  const [visible, setVisible] = useState(true);
-
   return (
     <div
       className={`bg-dimBlack fixed inset-0 flex items-center justify-center z-50 ${

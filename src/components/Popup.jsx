@@ -72,7 +72,6 @@ const Popup = ({ isOpen, onClose, formId }) => {
 
               <motion.div
                 className={`App bg-blue text-black text-center ${styles.buttonBlack}`}
-                onClick={onClose}
               >
                 <PopupButton
                   url="https://calendly.com/michael-csc/daysheets-demo"
