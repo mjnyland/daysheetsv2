@@ -33,8 +33,7 @@ const Reviews = () => {
     },
     {
       id: 1,
-      review: `Daysheets is is quick & easy to learn, their team is always available, and they implement our suggestions.
-`,
+      review: `“Daysheets is quick & easy to learn, their team is always available, and they implement our suggestions. Daysheets has quickly become our go-to touring information highway, and I am looking forward to their growth.`,
       image: avatar,
       name: "Tracey Wiedeman",
       title: "Production Coordinator",
@@ -48,7 +47,7 @@ const Reviews = () => {
     },
     {
       id: 3,
-      review: `Many of us nerdy managers are constantly seeking better solutions for more efficient tours. So far, it is the best tool i’ve seen out there in the market. It’s exactly what I was looking for, something that works for 2023, smart, intuitive and evolving quickly.`,
+      review: `Many of us nerdy managers are constantly seeking better solutions for more efficient tours. So far, it is the best tool ’ve seen out there in the market. It’s exactly what I was looking for, something that works for 2023, smart, intuitive and evolving quickly.`,
       image: avatar,
       name: "Ben Matusow",
       title: "Artist Manager",
