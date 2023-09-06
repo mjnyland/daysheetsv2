@@ -15,6 +15,7 @@ import HelpContent from "./HelpContent";
 import FormCalendly from "./FormCalendly";
 import ReviewCard from "./ReviewCard";
 import Popup from "./Popup";
+import HelpPopup from "./HelpPopup";
 
 export {
   Hero,
@@ -34,4 +35,5 @@ export {
   FormCalendly,
   ReviewCard,
   Popup,
+  HelpPopup,
 };
