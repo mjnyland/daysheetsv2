@@ -3,6 +3,9 @@ import styles from "../styles";
 import { logotype } from "../assets";
 
 const Footer = () => {
+  const privacyLink = "https://www.iubenda.com/privacy-policy/79370408";
+  const termsLink = "https://www.iubenda.com/terms-and-conditions/79370408";
+
   return (
     <div className={`${styles.sectionBoxSmall} bg-gray w-full`}>
       <div className={`${styles.contentBox} px-4`}>
@@ -14,8 +17,8 @@ const Footer = () => {
           />
           <ul className="flex flex-row text-darkBlue gap-[16px]">
             <li>Help</li>
-            <li>Privacy Policy</li>
-            <li>Terms of Use</li>
+            <a href={privacyLink}>Privacy Policy</a>
+            <a href={termsLink}>Terms of Use</a>
           </ul>
 
           <div className={`h-[1px] w-full bg-darkBlue`}></div>
