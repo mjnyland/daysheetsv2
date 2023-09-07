@@ -7,26 +7,11 @@ import { InlineWidget } from "react-calendly";
 import { PopupButton } from "react-calendly";
 import Popup from "./Popup";
 
-const DownloadButton = ({ handleDownload }) => {
-  return (
-    <button className={`${styles.button}`} onClick={handleDownload}>
-      Download Daysheets
-    </button>
-  );
-};
-
 const Navbar = () => {
   const [nav, setNav] = useState(false);
 
   const handleNav = () => {
     setNav(!nav);
-  };
-
-  const handleDownload = () => {
-    const daysheetsUrl = "https://apps.apple.com/us/app/daysheets/id1579012240"; // Replace this with the URL to your daysheets file
-    // You can implement any additional logic here before triggering the download if needed.
-    // For a simple file download, you can just change the location of the window to the daysheets URL.
-    window.location.href = daysheetsUrl;
   };
 
   const [isHidden, setIsHidden] = useState(true);
